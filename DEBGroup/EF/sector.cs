@@ -12,16 +12,16 @@ namespace DEBGroup.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class sector
+    public partial class Sector
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public sector()
+        public Sector()
         {
             this.SCPconnection = new HashSet<SCPconnection>();
         }
     
-        public int sectorID { get; set; }
-        public string sectorName { get; set; }
+        public int SectorID { get; set; }
+        public string SectorName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SCPconnection> SCPconnection { get; set; }

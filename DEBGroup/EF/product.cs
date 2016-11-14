@@ -12,16 +12,16 @@ namespace DEBGroup.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class product
+    public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public product()
+        public Product()
         {
             this.SCPconnection = new HashSet<SCPconnection>();
         }
     
-        public int productID { get; set; }
-        public string productName { get; set; }
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SCPconnection> SCPconnection { get; set; }

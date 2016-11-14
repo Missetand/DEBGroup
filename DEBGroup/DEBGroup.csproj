@@ -127,53 +127,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EF\Model.Context.tt">
+    <Content Include="EF\EF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>EF.edmx</DependentUpon>
+      <LastGenOutput>EF.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EF\Model.tt">
+    <Content Include="EF\EF.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
+      <DependentUpon>EF.edmx</DependentUpon>
+      <LastGenOutput>EF.cs</LastGenOutput>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="EF\category.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="EF\Category.cs">
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\customerInfo.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="EF\CustomerInfo.cs">
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\Model.Context.cs">
+    <Compile Include="EF\EF.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
+      <DependentUpon>EF.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\Model.cs">
+    <Compile Include="EF\EF.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\Model.Designer.cs">
+    <Compile Include="EF\EF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>EF.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EF\product.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="EF\Product.cs">
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\room.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="EF\Room.cs">
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\SCPconnection.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\sector.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+    <Compile Include="EF\Sector.cs">
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,12 +186,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="EF\Model.edmx">
+    <EntityDeploy Include="EF\EF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>EF.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="EF\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <Content Include="EF\EF.edmx.diagram">
+      <DependentUpon>EF.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

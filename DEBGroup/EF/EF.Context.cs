@@ -25,11 +25,11 @@ namespace DEBGroup.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<category> category { get; set; }
-        public virtual DbSet<customerInfo> customerInfo { get; set; }
-        public virtual DbSet<product> product { get; set; }
-        public virtual DbSet<room> room { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<CustomerInfo> CustomerInfo { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Room> Room { get; set; }
         public virtual DbSet<SCPconnection> SCPconnection { get; set; }
-        public virtual DbSet<sector> sector { get; set; }
+        public virtual DbSet<Sector> Sector { get; set; }
     }
 }

@@ -12,9 +12,9 @@ namespace DEBGroup.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class room
+    public partial class Room
     {
-        public int roomID { get; set; }
-        public string roomName { get; set; }
+        public int RoomID { get; set; }
+        public string RoomName { get; set; }
     }
 }

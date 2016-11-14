@@ -14,13 +14,13 @@ namespace DEBGroup.EF
     
     public partial class SCPconnection
     {
-        public int scpconnectionID { get; set; }
-        public Nullable<int> sectorID { get; set; }
-        public Nullable<int> categoryID { get; set; }
-        public Nullable<int> productID { get; set; }
+        public int ScpconnectionID { get; set; }
+        public Nullable<int> SectorID { get; set; }
+        public Nullable<int> CategoryID { get; set; }
+        public Nullable<int> ProductID { get; set; }
     
-        public virtual category category { get; set; }
-        public virtual product product { get; set; }
-        public virtual sector sector { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Sector Sector { get; set; }
     }
 }

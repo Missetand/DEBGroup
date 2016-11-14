@@ -12,12 +12,12 @@ namespace DEBGroup.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class customerInfo
+    public partial class CustomerInfo
     {
-        public int companyID { get; set; }
-        public string company { get; set; }
-        public string contactPerson { get; set; }
-        public Nullable<int> phoneNumber { get; set; }
-        public string e_mail { get; set; }
+        public int CompanyID { get; set; }
+        public string CompanyName { get; set; }
+        public string ContactPerson { get; set; }
+        public Nullable<int> PhoneNumber { get; set; }
+        public string Email { get; set; }
     }
 }

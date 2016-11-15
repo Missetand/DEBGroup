@@ -22,6 +22,7 @@ namespace DEBGroup.EF
     
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+        public string Details { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SCPconnection> SCPconnection { get; set; }

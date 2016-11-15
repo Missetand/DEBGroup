@@ -15,5 +15,11 @@ namespace DEBGroup.Controllers
             
             return View(db.Product.ToList());
         }
+        public ActionResult Details(int id)
+        {
+             EF.Product p = new EF.Product();
+             id = p.ProductID;
+            return View();
+        }
     }
 }

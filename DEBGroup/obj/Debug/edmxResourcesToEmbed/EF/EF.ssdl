@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EAL39_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="CustomerInfo">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="255" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SCPconnection">
+    <Key>
+      <PropertyRef Name="ScpconnectionID" />
+    </Key>
+    <Property Name="ScpconnectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SectorID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="Sector">
+    <Key>
+      <PropertyRef Name="SectorID" />
+    </Key>
+    <Property Name="SectorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SectorName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__SCPconnec__Categ__1332DBDC">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="SCPconnection" Type="Self.SCPconnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="SCPconnection">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SCPconnec__Produ__14270015">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="SCPconnection" Type="Self.SCPconnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SCPconnection">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SCPconnec__Secto__123EB7A3">
+    <End Role="Sector" Type="Self.Sector" Multiplicity="0..1" />
+    <End Role="SCPconnection" Type="Self.SCPconnection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="SectorID" />
+      </Principal>
+      <Dependent Role="SCPconnection">
+        <PropertyRef Name="SectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EAL39_DBModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="CustomerInfo" EntityType="Self.CustomerInfo" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="SCPconnection" EntityType="Self.SCPconnection" Schema="db_owner" store:Type="Tables" />
+    <EntitySet Name="Sector" EntityType="Self.Sector" Schema="db_owner" store:Type="Tables" />
+    <AssociationSet Name="FK__SCPconnec__Categ__1332DBDC" Association="Self.FK__SCPconnec__Categ__1332DBDC">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="SCPconnection" EntitySet="SCPconnection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SCPconnec__Produ__14270015" Association="Self.FK__SCPconnec__Produ__14270015">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SCPconnection" EntitySet="SCPconnection" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SCPconnec__Secto__123EB7A3" Association="Self.FK__SCPconnec__Secto__123EB7A3">
+      <End Role="Sector" EntitySet="Sector" />
+      <End Role="SCPconnection" EntitySet="SCPconnection" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

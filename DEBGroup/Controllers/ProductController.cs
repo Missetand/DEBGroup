@@ -13,8 +13,20 @@ namespace DEBGroup.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            
-            return View(db.Product.ToList());
+            var m = new Models.Product.Index();
+
+            m.DisplayName = "Retter christian senere...";
+
+            foreach (var item in db.Product.OrderBy(p => p.ProductName))
+            {
+                var mp = new Models.Product.ModelProduct();
+                mp.ProductName = item.ProductName;
+                mp.ProductID = item.ProductID;
+                mp.DetailsUrl = item.Details;
+                m.AllProducts.Add(mp);
+            }
+
+            return View(m);
         }
         public ActionResult Details(int id)
         {

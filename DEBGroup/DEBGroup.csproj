@@ -151,6 +151,7 @@
     <Content Include="EF\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\fdhgj.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -167,6 +168,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\SectorController.cs" />
     <Compile Include="EF\Category.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -204,11 +206,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\CustomerInfo.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Room.cs" />
-    <Compile Include="Models\Sector.cs" />
+    <Compile Include="EF_Helper\Category.cs" />
+    <Compile Include="EF_Helper\CustomerInfo.cs" />
+    <Compile Include="EF_Helper\Product.cs" />
+    <Compile Include="EF_Helper\Room.cs" />
+    <Compile Include="EF_Helper\Sector.cs" />
+    <Compile Include="Models\Product\Index.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +231,7 @@
     <Content Include="Views\Sector\Index.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Room\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,9 +18,21 @@ namespace DEBGroup.Controllers
         }
         public ActionResult Details(int id)
         {
-             EF.Product p = new EF.Product();
-             id = p.ProductID;
-            return View();
+            var product = db.Product.FirstOrDefault(p => p.ProductID == id);
+            
+            return View(product);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var product = db.Product.FirstOrDefault(p => p.ProductID == id);
+
+            if (TryUpdateModel(product, "",
+                new string[] { "ProductName", "Details" }))
+                db.SaveChanges();
+            return View(product);
+        }
+
+
     }
 }

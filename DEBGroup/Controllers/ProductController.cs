@@ -15,24 +15,18 @@ namespace DEBGroup.Controllers
         {
             var m = new Models.Product.Index();
 
-            m.DisplayName = "Retter christian senere...";
+            m.DisplayName = "Produkter";
 
             foreach (var item in db.Product.OrderBy(p => p.ProductName))
             {
                 var mp = new Models.Product.ModelProduct();
-                mp.ProductName = item.ProductName;
+                mp.SectorName = item.ProductName;
                 mp.ProductID = item.ProductID;
                 mp.DetailsUrl = item.Details;
                 m.AllProducts.Add(mp);
             }
 
             return View(m);
-        }
-        public ActionResult Details(int id)
-        {
-            var product = db.Product.FirstOrDefault(p => p.ProductID == id);
-            
-            return View(product);
         }
 
         public ActionResult Edit(int id)

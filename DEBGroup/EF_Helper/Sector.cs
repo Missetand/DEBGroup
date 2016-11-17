@@ -7,7 +7,7 @@ namespace DEBGroup.EF
 {
     public partial class Sector
     {
-        public Sector(string productname)
+        public Sector(string SectorName)
         {
             this.SectorName = SectorName;
         }

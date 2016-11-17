@@ -12,7 +12,18 @@ namespace DEBGroup.Controllers
         // GET: Category
         public ActionResult Index()
         {
-            return View(db.Category.ToList());
+            var m = new Models.Category.Index();
+
+            m.DisplayName = "Categories";
+
+            foreach (var item in db.Category.OrderBy(c => c.CategoryName))
+            {
+                var mc = new Models.Category.ModelCategory();
+                mc.CategoryName = item.CategoryName;
+                mc.CategoryID = item.CategoryID;
+                m.AllCategories.Add(mc);
+            }
+            return View(m);
         }
     }
 }

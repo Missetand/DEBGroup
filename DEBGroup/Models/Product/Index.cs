@@ -21,7 +21,7 @@ namespace DEBGroup.Models.Product
 
     public class ModelProduct
     {
-        public string ProductName { get; set; }
+        public string SectorName { get; set; }
         public int ProductID { get; set; }
         public string DetailsUrl { get; set; }
     }

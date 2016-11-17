@@ -12,7 +12,19 @@ namespace DEBGroup.Controllers
         // GET: Sector
         public ActionResult Index()
         {
-            return View(db.Sector.ToList());
+            var m = new Models.Sector.Index();
+
+            m.DisplayName = "Sectors";
+
+            foreach (var item in db.Sector.OrderBy(s => s.SectorName))
+            {
+                var ms = new Models.Sector.ModelSector();
+                ms.SectorName = item.SectorName;
+                ms.SectorID = item.SectorID;
+                m.AllSectors.Add(ms);
+            }
+
+            return View(m);
         }
     }
 }

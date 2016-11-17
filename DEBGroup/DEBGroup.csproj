@@ -211,7 +211,9 @@
     <Compile Include="EF_Helper\Product.cs" />
     <Compile Include="EF_Helper\Room.cs" />
     <Compile Include="EF_Helper\Sector.cs" />
+    <Compile Include="Models\Category\Index.cs" />
     <Compile Include="Models\Product\Index.cs" />
+    <Compile Include="Models\Sector\Index.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

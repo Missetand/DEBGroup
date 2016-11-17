@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DEBGroup.EF.Category>
+﻿@model DEBGroup.Models.Category.Index
 
 @{
     ViewBag.Title = "Index";
@@ -12,22 +12,25 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CategoryName)
+            @Html.DisplayNameFor(model => model.DisplayName)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryName)
-        </td>
-        <td>
-            @Html.ActionLink("View", "View", new { id = item.CategoryID }) |
-            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model.AllCategories)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
+                @Html.ActionLink("Details", "Index", "Product", new { id = item.CategoryID }, null) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID })
+
+            </td>
+        </tr>
+    }
 
 </table>

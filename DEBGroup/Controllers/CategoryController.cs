@@ -28,5 +28,14 @@ namespace DEBGroup.Controllers
             }
             return View(m);
         }
+        public ActionResult Edit(int id)
+        {
+            var category = db.Category.FirstOrDefault(c => c.CategoryID == id);
+
+            if (TryUpdateModel(category, "",
+                new string[] { "CategoryName" }))
+                db.SaveChanges();
+            return View(category);
+        }
     }
 }

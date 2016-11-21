@@ -19,12 +19,15 @@ namespace DEBGroup.Controllers
 
                 foreach (var item in db.Category.OrderBy(c => c.CategoryName))
                 {
+                    var ms = new Models.Sector.ModelSector();
+                    ms.SectorID = id;
                     var mc = new Models.Category.ModelCategory();
                     mc.CategoryName = item.CategoryName;
                     mc.CategoryID = item.CategoryID;
                     m.AllCategories.Add(mc);
-                    if (item.CategoryID == id)
-                    break;
+
+                    //if (ms.SectorID == id)
+                    //break;
             }
             return View(m);
         }

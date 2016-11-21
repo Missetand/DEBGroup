@@ -24,8 +24,8 @@
         </td>
         <td>
             
+            @Html.ActionLink("View", "Index", "Category", new { id = item.SectorID }, null) |
             @Html.ActionLink("Edit", "Edit", new { id=item.SectorID }) |
-            @Html.ActionLink("Details", "Index","Category", new { id = item.SectorID}, null) |
             @Html.ActionLink("Delete", "Delete", new { id=item.SectorID })
 
         </td>

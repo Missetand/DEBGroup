@@ -6,20 +6,36 @@
 
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        button 
+        {
+	             width: 150px
+        }
+
+    </style>
+
+
 </head>
 <body>
-    <div> 
-        <form style="display: inline" action="" method="get"> <button>Create Order</button> </form> 
-        <br />
-        <br />
-        <form style="display: inline" action="" method="get"> <button>View Order</button> </form>
-        <br />
-        <br />
-        <form style="display: inline" action="~/Sector/Index" method="get"> <button>Admin</button> </form>
-
-
-    </div>
+       <div class="container">
+               <br />
+           <form style="display: inline" action="~/Sector/Index" method="get"><button class="btn btn-info btn-lg">Create Order</button></form>
+               <br />
+               <br />
+           <form style="display: inline" action="~/Sector/Index" method="get"><button class="btn btn-info btn-lg">View Order</button></form>
+               <br />
+               <br />
+           <form style="display: inline" action="~/Sector/Index" method="get"><button class="btn btn-info btn-lg">Admin</button></form>
+               <br />
+               <br />
+           
+</div>
 </body>
 </html>

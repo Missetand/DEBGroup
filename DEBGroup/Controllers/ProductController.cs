@@ -12,28 +12,26 @@ namespace DEBGroup.Controllers
     {
         EF.EAL39_DBEntities db = new EF.EAL39_DBEntities();
         // GET: Product
-        public ActionResult Index(int id)
+        public ActionResult Index(int id, int id2)
         {
             var m = new Models.Product.Index();
-            
-            //m.DisplayName = "Produkter";
-            //var scp = db.SCPconnection.FirstOrDefault(s => s.CategoryID == id);
-            //if (id == scp.ProductID)
-                {
 
-                foreach (var item in db.Product.OrderBy(p => p.ProductName))
+                // select * from sector where sectorid = 1
+                m.DisplayName = db.Category.FirstOrDefault(p => p.CategoryID == id).CategoryName;
+
+                // select distinct CategoryName, s.CategoryID from SCPconnection s, Category g where s.SectorID = 1 and s.CategoryID = g.CategoryID
+                var allProductID = db.SCPconnection.Where(p => p.CategoryID == id2 && p.SectorID == id).Select(p => p.ProductID).Distinct();
+                foreach (var ProductID in allProductID)
                 {
-                    var mp = new Models.Product.ModelProduct();
-                    mp.SectorName = item.ProductName;
-                    mp.ProductID = item.ProductID;
-                    mp.DetailsUrl = item.Details;
-                    m.AllProducts.Add(mp);  
-                    if (item.ProductID == id)
-                    break;
+                    var mc = new Models.Product.ModelProduct();
+                    var c = db.Product.FirstOrDefault(p => p.ProductID == ProductID);
+
+                    mc.ProductName= c.ProductName;
+                    m.AllProducts.Add(mc);
                 }
-            }
             return View(m);
         }
+
 
         public ActionResult Edit(int id)
         {

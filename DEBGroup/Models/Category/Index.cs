@@ -9,6 +9,7 @@ namespace DEBGroup.Models.Category
     {
         public List<ModelCategory> AllCategories { get; set; }
         public string DisplayName { get; set; }
+        public int SectorID { get; set; }
 
         public Index()
         {

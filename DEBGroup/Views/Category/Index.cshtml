@@ -26,7 +26,7 @@
             <td>
 
                 @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
-                @Html.ActionLink("Details", "Index", "Product", new { id = item.CategoryID }, null) |
+                @Html.ActionLink("Details", "Index", "Product", new {id = Model.SectorID, id2 = item.CategoryID }, null) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID })
 
             </td>

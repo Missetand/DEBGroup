@@ -170,6 +170,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\SectorController.cs" />
+    <Compile Include="DatabaseFacade\IDatabaseFacadeSector.cs" />
     <Compile Include="EF\Category.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

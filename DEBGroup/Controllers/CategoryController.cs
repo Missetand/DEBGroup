@@ -14,20 +14,21 @@ namespace DEBGroup.Controllers
         {
             var m = new Models.Category.Index();
 
-            // select * from sector where sectorid = 1
-            m.DisplayName = db.Sector.FirstOrDefault(p => p.SectorID == id).SectorName;
+            m.DisplayName = "Categories";
+            
 
-            // select distinct CategoryName, s.CategoryID from SCPconnection s, Category g where s.SectorID = 1 and s.CategoryID = g.CategoryID
-            var aallCategoryID = db.SCPconnection.Where(p => p.SectorID == id).Select(p => p.CategoryID).Distinct();
-            foreach (var CategoryID in aallCategoryID)
-            {
-                var mc = new Models.Category.ModelCategory();
-                var c = db.Category.FirstOrDefault(p => p.CategoryID == CategoryID);
+                foreach (var item in db.Category.OrderBy(c => c.CategoryName))
+                {
+                    var ms = new Models.Sector.ModelSector();
+                    ms.SectorID = id;
+                    var mc = new Models.Category.ModelCategory();
+                    mc.CategoryName = item.CategoryName;
+                    mc.CategoryID = item.CategoryID;
+                    m.AllCategories.Add(mc);
 
-                mc.CategoryName = c.CategoryName;
-                m.AllCategories.Add(mc);
+                    //if (ms.SectorID == id)
+                    //break;
             }
-
             return View(m);
         }
         public ActionResult Edit(int id)

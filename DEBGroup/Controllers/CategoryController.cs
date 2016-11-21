@@ -33,7 +33,7 @@ namespace DEBGroup.Controllers
             var category = db.Category.FirstOrDefault(c => c.CategoryID == id);
 
             if (TryUpdateModel(category, "",
-                new string[] { "ProductName", "Details" }))
+                new string[] { "CategoryName" }))
                 db.SaveChanges();
             return View(category);
         }

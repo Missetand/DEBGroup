@@ -11,13 +11,11 @@
 </head>
 <body>
     <div> 
-        <button type="button">Click Me!</button> 
+        <form style="display: inline" action="" method="get"> <button>Create Order</button> </form> 
         <br />
-        <button type="button">Click Me!</button> 
+        <form style="display: inline" action="" method="get"> <button>View Order</button> </form>
         <br />
-        <button type="button"><a href="~/Views/Sector/Index.cshtml">admin</a></button> 
-        @Html. ("Details", "Index", "Sector")
-
+        <form style="display: inline" action="~/Views/Sector/Index.cshtml" method="get"> <button>Admin</button> </form>
 
 
     </div>

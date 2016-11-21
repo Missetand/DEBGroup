@@ -167,6 +167,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FrontPageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\SectorController.cs" />
@@ -237,6 +238,7 @@
     <Content Include="Views\Room\Index.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\FrontPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -23,7 +23,7 @@
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Edit", "Edit", new {id = Model.SectorID, id2 = Model.CategoryID, id3 = item.ProductID}, null) |
                 @if (item.DetailsUrl != null && item.DetailsUrl.Trim() != "")
                 {
                     <a href="@item.DetailsUrl">Details</a> 

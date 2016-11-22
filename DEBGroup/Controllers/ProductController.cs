@@ -33,13 +33,25 @@ namespace DEBGroup.Controllers
         }
 
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int id3)
         {
-            var product = db.Product.FirstOrDefault(p => p.ProductID == id);
-
-            if (TryUpdateModel(product, "",
-                new string[] { "ProductName", "Details" }))
+            EF.Product product = db.Product.Find(id3);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            
+            return View(product);
+        }
+        [HttpPost]
+        public ActionResult Edit (EF.Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View(product);
         }
 

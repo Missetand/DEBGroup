@@ -66,3 +66,12 @@ C:\Users\Christian Desktop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\System.Web.
 C:\Users\Christian Desktop\Desktop\DEBGroup\DEBGroup.Tests\obj\Debug\DEBGroup.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Christian Desktop\Desktop\DEBGroup\DEBGroup.Tests\obj\Debug\DEBGroup.Tests.dll
 C:\Users\Christian Desktop\Desktop\DEBGroup\DEBGroup.Tests\obj\Debug\DEBGroup.Tests.pdb
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\Microsoft.AspNet.Scaffolding.EntityFramework.12.0.dll
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\Microsoft.AspNet.Scaffolding.12.0.dll
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\EnvDTE.dll
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\EnvDTE80.dll
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\stdole.dll
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\Microsoft.AspNet.Scaffolding.EntityFramework.12.0.xml
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\Microsoft.AspNet.Scaffolding.12.0.xml
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\EnvDTE.xml
+C:\Users\Christian Laptop\Desktop\DEBGroup\DEBGroup.Tests\bin\Debug\EnvDTE80.xml

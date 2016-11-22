@@ -171,13 +171,15 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\SectorController.cs" />
-    <Compile Include="DatabaseFacade\IDatabaseFacadeSector.cs" />
+    <Compile Include="DatabaseFacade\SectorDatabaseFacade.cs" />
     <Compile Include="EF\Category.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\CustomerInfo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF_Helper\EAL39_DBEntities.cs" />
+    <Compile Include="EF_Helper\IEAL39_DBEntities.cs" />
     <Compile Include="EF\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -10,6 +10,8 @@ namespace DEBGroup.Models.Product
         public List<ModelProduct> AllProducts { get; set; }
 
         public string DisplayName { get; set; }
+        public int SectorID { get; set; }
+        public int CategoryID { get; set; }
         public Index()
         {
             AllProducts = new List<ModelProduct>();
